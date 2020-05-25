@@ -1,0 +1,489 @@
+@import 'src/styles/vars';
+
+// Size for mobile
+
+@media screen and (min-width:320px) {
+
+    .home {
+        background: linear-gradient(-134deg, rgb(149, 81, 160) 0%, rgb(33, 24, 107) 100%);
+        position: relative;
+        min-height: 100vh;   
+    }
+
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        padding: 5rem 1.5rem;
+    }
+
+    .wave {
+        width: 100%;
+        height: 200px;
+        background: url('../../../public/images/Wave_mobile.svg') no-repeat center;
+        background-size: cover;
+        position: absolute;
+        bottom:-80px;
+        z-index: 0;
+    }
+    
+   
+    .intro {
+        padding: 1rem 20px 30px;
+       
+        
+        &-content {
+            display: flex;
+            position: relative;
+            flex-wrap: wrap;
+            padding-top: 4rem;
+        }
+    
+
+        &-title {
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            font-family: 'Poppins';
+            text-transform: uppercase;
+            font-size: 2rem;
+
+        }
+
+        &-text {
+            color: white;
+            text-align: center;
+            word-spacing: -1px;
+            font-family: 'Inter';;
+      
+            
+            
+        }
+
+        &-button {
+            color: white;
+            text-align: center;
+            width: 80%;
+            background-color: transparent;
+            border: 1px white solid;
+            border-radius: 100px;
+            padding: .5rem .9rem;
+            margin: 2.2rem auto 3rem;
+            transition: .4s;
+            display: block;
+            
+            
+
+            &:hover {
+                color: white;
+                background-color: $orange;
+                border: 1px $orange solid;
+                text-decoration: none;
+            }
+        }
+
+        &-img--mobile {
+            width: 80%;
+            position: relative;
+            left: 20%;
+            top: 30px;
+
+        }
+
+        &-img--tablet {
+            display: none;
+            width: 80%;
+            position: relative;
+            margin-bottom: 1rem;
+          
+
+        }
+
+        &-img--desk {
+            display: none;
+        }
+    }
+
+    .card-story {
+        height: 50vh;
+        position: relative;
+        width: 100%;
+        background-color: black; 
+        margin: 30px auto;
+        border-radius: 30px;  
+        box-shadow: rgb(82, 82, 82) 5px 5px 30px;
+        cursor: pointer;
+        transition: .4s;
+        padding: 0;
+        overflow: hidden;
+
+        &-title {
+            font-family: 'Futura';
+            font-weight: 900;
+            font-size: 1rem;
+            text-transform: uppercase;
+            transition: .5s;
+            width: 100%;
+            margin-bottom: 1rem;
+            
+
+            
+        }
+    
+        &-descrip {
+            color: white;
+            position: absolute;
+            top: 0px;
+            transition: .5s;
+            opacity: 0;
+            font-family: $font-inter;
+          
+        }
+    
+        &-link {
+            position: absolute;
+            color: white;
+            font-size: .9em;
+            transition: .5s;
+            font-family: $font-inter;
+            top: 40px;
+
+            &:hover {
+                color:white;
+                text-decoration: none;
+            }
+        }
+    
+    
+        &-img {
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+            opacity: .5;   
+        } 
+
+        &-text-content {
+            position: absolute;
+            color: white;
+            bottom: 80px;
+            left: 20px;   
+            width: 80%; 
+        }
+    }
+}
+
+// Size for tablet
+
+@media screen and (min-width: 768px) {
+
+    .home {
+      min-height: 950px;  
+
+        
+    }
+
+    .content {
+        padding-top: 7rem;
+    }
+
+    .wave {
+        height: 250px;
+        
+    }
+    .intro {
+
+        &-content {
+            flex-wrap: wrap-reverse;
+        }
+
+        &-left{
+            padding: 0 40px;
+        }
+
+        &-title {
+            color: white;
+            font-size: 2em;
+            text-align: left;
+
+        }
+
+        &-text {
+            color: white;
+            font-size: .95em;
+            text-align: left;
+            word-spacing: -1px;
+        }
+
+        &-button {
+            margin-top: 3rem;
+            width: 45%;
+        }
+
+        &-img {
+            margin: auto;
+            text-align: center;
+        }
+
+        &-img--mobile {
+            display: none;
+        }
+
+        &-img--tablet {
+            display: initial;
+        }
+
+        
+
+
+    }
+
+    .card-story {
+        height: 45vh;
+
+        &-text-content {
+            position: absolute;
+            color: white;
+            bottom: 60px;
+            left: 50px;
+            width: 100%;
+            
+            }
+        
+        &-title {
+            font-size: 1.5rem;
+        }
+    }
+
+
+
+
+}
+
+// Size for desktop
+
+@media screen and (min-width: 992px) {
+    .home {
+        padding-top: 12rem;
+        min-height:900px;
+    }
+
+    .content {
+        padding: 10rem;
+        min-height: 900px;
+
+
+    }
+
+    .wave {
+        width: 100%;
+        height: 100%;
+        background: url('../../../public/images/Wave_desk.svg') no-repeat center;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        //bottom:-130px;
+        z-index: 0;
+    }
+
+    .intro {
+
+        padding: 0;
+
+        &-content {
+            position: relative;
+            flex-wrap: nowrap;
+            padding: 20px 0 0;
+            z-index: 1;
+            
+        }
+
+        &-left{
+            width: 50%;
+            padding: 0;
+        }
+
+        &-title {
+            color: white;
+            font-size: 2em;
+            text-align: left;
+            margin-bottom: 2rem;
+
+        }
+
+        &-text {
+            color: white;
+            font-size: .9em;
+            text-align: left;
+            word-spacing: -1px;
+            line-height: 1.7;
+            
+        }
+
+        &-button {
+            margin-left: inherit;
+            position: relative;
+            margin-top:0;
+            z-index: 6;
+            width: 70%;
+            top: 50px;
+            padding: .5rem 1rem .6rem ;
+            //line-height:1.2;
+           
+            
+        }
+
+        &-img {
+            margin: auto;
+            text-align: center;
+            width: 50%; 
+        }
+
+        &-img--tablet {
+            display: none;
+        }
+
+        &-img--desk {
+            display: initial;
+            position: relative;
+            top: -50px;
+            left: 10px;
+            z-index: 1;
+            width:110%;
+        }
+
+    }
+
+
+    .card-story {
+
+        height: 70vh;
+        margin-bottom: 5rem;
+         
+        &-text-content{
+            position: absolute;
+            color: white;
+            bottom: 150px;
+            left: 80px;      
+            width: 70%;
+        }
+
+        &-title {
+            font-size: 2rem;
+            width: 100%;
+        }
+
+        &:hover &-title {
+            transform: translateY(-60%);
+        }
+
+        &:hover .title-home-3 {
+            transform: translateY(-5%);
+        }
+    
+        &:hover &-descrip {
+            transform: translateY(40%);
+            opacity: 1;
+        }
+    
+        &:hover &-link {
+            transform: translateY(200%);
+        }
+    
+        &:hover .link-home-3 {
+            transform: translateY(100%);
+        }
+
+        &:hover &-descrip {
+            transform: translateY(40%);
+            opacity: 1;
+        }
+
+        &:hover .title-5 {
+            transform: translateY(-55%);
+
+        }
+    
+        &:hover .link-cat-5 {
+            transform: translateY(100%);
+
+        }
+    }
+
+    #card-1:target {
+        transition: 1s;
+        
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .card-story {
+
+        &:hover .link-home-1 {
+            transform: translateY(80%);
+        }
+
+        &:hover .link-home-2 {
+            transform: translateY(80%);
+        }
+
+        &:hover .link-home-3 {
+            transform: translateY(50%);
+        }
+
+        &:hover .title-home-3 {
+            transform: translateY(-40%);
+            opacity: 1;
+        }
+
+        &:hover .descrip-home-3 {
+            transform: translateY(100%);
+            opacity: 1;
+        }
+    }
+    }
+
+
+// Size for desktop ++
+@media screen and (min-width: 1385px) {
+
+
+    .card-story {
+
+        &:hover .descrip-home-3 {
+            transform: translateY(50%);
+        }
+
+        &:hover .title-home-3 {
+            transform: translateY(-70%);
+        }
+
+
+        &:hover .link-home-3 {
+            transform: translateY(90%);
+        }
+
+        &:hover .link-home-1 {
+            transform: translateY(200%);
+        }
+
+        &:hover .link-home-2 {
+            transform: translateY(200%);
+        }
+
+        &:hover .link-cat-1,  {
+            transform: translateY(90%);
+        }
+
+        &:hover .link-cat-2,  {
+            transform: translateY(90%);
+        }
+
+        &:hover .link-cat-3,  {
+            transform: translateY(90%);
+        }
+
+        &:hover .link-cat-4,  {
+            transform: translateY(90%);
+        }
+    }
+}

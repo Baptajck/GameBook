@@ -1,0 +1,63 @@
+// Import variables
+
+@import 'src/styles/vars';
+
+
+@media screen and (min-width: 320px) {
+  .not-found {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &-box {
+      background-color: rgb(255, 255, 255);
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+    }
+  
+    &-title {
+      
+      text-align: center;
+      font-family: $font;
+      font-weight: bold;
+      font-size: 10rem;
+      color: black;
+      
+    }
+  
+    &-text {
+      text-align: center;
+      font-size: 1.5rem;
+      font-family: $font;
+      font-weight: bold;
+      color: $grey-text;
+      
+    }
+
+    &-button {
+      border-radius: 100px;
+      padding: 0.5rem 1.8rem;
+      background-color: blueviolet;
+      color: rgb(255, 255, 255);
+      border: none;
+      //box-shadow: 4px 2px 20px 0px #9e9494;
+      transition: .2s ease-in;
+
+      &:hover {
+        background-color:  #fc5c42;	
+        
+      }
+
+      &-nav {
+        text-align: center;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

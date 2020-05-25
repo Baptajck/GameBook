@@ -1,0 +1,177 @@
+@import 'src/styles/vars';
+
+@media screen and (min-width: 320px) {
+
+  .image {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+
+  
+    &-title{
+      position: relative;
+      font-family: $font-inter;
+      font-weight: bold;
+      margin-top: 5rem;
+      z-index: 1;
+      color: white;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+  
+    &-descrip {
+      position: relative;
+      font-family: $font;
+      z-index: 1;
+      color: white;
+      font-size: 1rem;
+    }
+    
+  
+    &-contact {
+      position: absolute;
+      object-fit: cover;
+      height: 100%;
+      opacity: .4;
+      top:0
+    }
+  
+    
+  }
+  
+  
+  .contact {
+    //margin: 2rem;
+    display: flex;
+    flex-direction: column-reverse;
+    
+  
+    &-form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-self: flex-end;
+      margin: 3rem 0;
+
+      &-desc {
+        margin: 1rem 0;
+        font-family: $font-inter;
+        color: lighten(#000000, 40%);
+      }
+
+  
+      &-title {
+       
+        font-family: $font;
+        font-weight: bold;
+        font-size: 1.7rem;
+      }
+    
+      &-input {
+        margin-bottom: 2em;
+        background-color: rgb(243, 243, 243);
+        border: none;
+        font-family: $font;
+  
+        &-textarea {
+          margin-top: 2em;
+          background-color: rgb(243, 243, 243);
+          border: none;
+        }
+      }
+   
+      &-button {
+        //float: right;
+        background-color:$violet;
+        font-family: $font;
+        font-size: .9rem;
+        font-weight: bold;
+        border: none;
+
+        &:hover {
+          background-color: darken( $violet, 15% );
+        }
+
+      }
+    }
+  
+    &-info {
+      width: 100%;
+      margin-top: 3rem;
+
+      &-title {
+        
+        font-family: $font;
+        font-weight: bold;
+        font-size: 1.7rem;
+      }
+  
+      &-text-1 {
+        font-family: $font-inter;
+        font-size: 1rem;
+        color: lighten(#000000, 40%); 
+        margin: 2rem 0;
+      
+      }
+
+      &-icon {
+       color: $violet;
+      }
+
+      &-text {
+        margin-bottom: 1rem;
+      }
+  
+      &-text-span {
+        margin-left: 1em;
+        font-family: $font-inter;
+      }
+    }
+  }
+  
+}
+
+@media screen and (min-width: 768px) {
+  
+  .image {
+
+    &-title {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+
+  .image {
+
+    &-title {
+      font-size: 3.5rem;
+    }
+    
+    &-descrip {
+      font-size: 1.3rem;
+    }
+  }
+
+  .contact {
+    flex-direction: row-reverse;
+    
+    &-info {
+
+      &-title {
+        
+      }
+
+      &-text-1 {
+        width: 80%;
+        margin-bottom: 3rem;
+      }
+    }
+    
+  }
+}
